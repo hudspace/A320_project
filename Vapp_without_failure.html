@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>A320 Landing Performance Web Application</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<header>
+    <h1>A320/321 Landing Performance Calculator</h1>
+</header>
+
+<body>
+
+
+    <h3>Fill in the following fields. When you're done, click "Submit":</h3>
+
+    <form>
+        <label for="tailnumber">Tail Number:</label>
+        <input type="text" name="tailnumber">
+
+        <label for="currentweight">Current Weight (x1000lb):</label>
+        <input type="number" name="currentweight">
+
+        <label for="cg">Takeoff CG:</label>
+        <input type="number" name="cg">
+
+        <label for="wind">Wind (<em>Enter METAR or tower-observed current wind on the field</em>></label>
+        <input class="windfield" type="number" name="wind direction" placeholder="direction">
+        /
+        <input class="windfield" type="number" name="wind velocity" placeholder="velocity">
+
+        <label for="ecam">ECAM Top Message <em>(type top line warning exactly as it appears)</em>:</label>
+        <input id="ecamexample" type="text" name="ecam" placeholder="ex: ELEC GEN 1(2) (APU GEN) OVERLOAD">
+
+
+
+        <input id="submit" type="submit" value="Submit">
+
+        <h3> <em>V<sub>APP</sub></em>: _______ kts</h3>
+        <h3> <em>V<sub>REF</sub></em>: _______ kts</h3>
+        <h3 id="result">Required landing distance: _______  ft</h3>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

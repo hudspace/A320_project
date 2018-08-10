@@ -1,0 +1,27 @@
+# Compiled Python Bytecode
+*.pyc
+*.pyo
+__pycache__
+__.pyc
+
+
+# OS & Temp Files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+*~
+
+# Database Files
+db.sqlite3
+
+
+# Virtual Environments
+sandbox*/
+venv*/
+.env
+
+#External helper files
+geckodriver.log
+pipfile
+pipfile.lock
