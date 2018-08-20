@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
 import unittest
 
 class NewVisitorTest(unittest.TestCase):
@@ -16,6 +18,20 @@ class NewVisitorTest(unittest.TestCase):
 
         #He notices the title and knows he's pulled up the right app
         self.assertIn('A320 Landing Performance Web Application', self.browser.title)
+        header_text = self.browser.find_element_by_tag_name('h1')
+        self.assertIn('A320/321 Landing Performance Calculator', header_text)
+
+        #He is invited to enter a tail number
+        inputbox = self.browser.find_element_by_id('id_tail_number')
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Enter a tail number'
+            )
+
+        #He types "N503JB" into the text box
+        inputbox.send_keys(Keys.ENTER)
+        time.sleep(1)
+
 
         self.fail('Finish the test!')
 
