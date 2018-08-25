@@ -27,6 +27,33 @@
     <form>
         <label id="id_tail_number" for="tailnumber">Enter your tail number:</label>
         <input type="text" name="tailnumber">
+    </form>
+
+    <form>
+
+        <p>What ECAM message are you receiving?</p>
+        <select id="ECAM" onchange="location = this.value">
+            <option id="select" value="#">Select your ECAM message</option>
+            <option id="blank" value="#"></option>
+            <option id="ELECTRICAL SYSTEM" value="#">ELECTRICALSYSTEM</option>
+            <option id="acbus1fault" value="#">AC BUS 1 FAULT</option>
+            <option id="acbus2fault" value="#">DC BUS 2 FAULT</option>
+            <option id="dcbus12fault" value="#">DC BUS 1+2 FAULT</option>
+            <option id="dcessbusfault" value="#">DC ESS BUS FAULT (if ice accretion)</option>
+            <option id="dcessshedbus" value="#">DC ESS SHED BUS (if ice accretion)</option>
+            <option id="dcemerconfig" value="#">DC EMER CONFIG (REF DIST calculated w/140kts min)</option>
+            <option id=elecemerconfig" value="#">ELEC EMER CONFIG (REF DIST calculated w/140kts min)</option>
+            <option id="blank" value="#"></option>
+            <option id="flightcontrols" value="#">FLIGHT CONTROL SYSTEM</option>
+            <option id="onesplrfault" value="#">ONE SPLR FAULT (if no spoiler runaway suspected)</option>
+            <option id="onesplrfault" value="#">ONE SPLR FAULT (if spoiler runaway suspected)</option>
+            <option id="twosplrfault" value="#">TWO SPLR FAULT</option>
+            <option id="gndsplr1234fault" value="#">GND SPLR 1+2(3+4) FAULT</option>
+
+        </select>
+
+    </form>
+
 
         <!--
 
@@ -44,7 +71,7 @@
         <label for="ecam">ECAM Top Message <em>(type top line warning exactly as it appears)</em>:</label>
         <input id="ecamexample" type="text" name="ecam" placeholder="ex: ELEC GEN 1(2) (APU GEN) OVERLOAD">
 
-    -->
+        -->
 
 
 

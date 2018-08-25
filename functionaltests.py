@@ -31,8 +31,11 @@ class NewVisitorTest(unittest.TestCase):
             )
 
         #He types "N503JB" into the text box
-        inputbox.send_keys(Keys.ENTER)
+        inputbox.send_keys('503JB')
+        inputbox.send_keys(Keys.RETURN)
         time.sleep(1)
+
+
 
 
         self.fail('Finish the test!')
