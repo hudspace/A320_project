@@ -5,7 +5,6 @@ def Vapp_without_failure(vls, appr_cor):
 def determine_vls(weight):
     vls_conf3 = ""
     vls_conf_full = ""
-
     if weight < 96000:
         print('Please enter a valid landing weight')
     if weight >= 96000 and weight < 102000:
@@ -41,7 +40,7 @@ def determine_vls(weight):
     else:
         vls_conf_full = int(147)
         vls_conf_3 = int(152)
-    print(vls_conf3)
+    print(vls_conf_3)
 
 determine_vls(142000)
 
